@@ -1,0 +1,167 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #000; /* Hitam */
+  color: #00ffe1; /* Biru Neon */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #111; /* Hitam sedikit lebih terang */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #00ffe1;
+}
+
+h1 {
+  margin: 0;
+  color: #00ffe1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #00ffe1;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #00ffe1;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #00ffe1;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 225, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+/* Menyusun header dengan logo di tengah */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  padding: 40px;
+  text-align: center;
+  border-bottom: 2px solid #00ffe1;
+}
+
+/* Styling logo */
+.logo {
+  width: 150px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px #00ffe1);
+}
+
+/* Styling judul */
+h1 {
+  color: #00ffe1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h1 {
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0.3;
+  }
+}
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ffe1;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #00ffe1;
+  text-decoration: none;
+  font-weight: bold;
+}
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #000;
+  padding: 20px 0;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 8); /* jumlah gambar x lebar gambar */
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffe1;
+}
+
+/* Animasi geser */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

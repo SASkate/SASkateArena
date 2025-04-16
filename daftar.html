@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daftar Skate Arena</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial;
+      }
+
+      h1 {
+        text-align: center;
+        color: #00ffe1;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #111;
+        border: 1px solid #00ffe1;
+        border-radius: 10px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+      }
+
+      button {
+        background-color: #00ffe1;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #00ccbe;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Skate Arena</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="daftar.html">Daftar</a>
+      </nav>
+    </header>
+    <h1>Daftar Jadi Bagian dari Skate Arena</h1>
+
+    <form id="wa-form">
+      <label>Nama Lengkap:</label>
+      <input type="text" id="nama" required />
+
+      <label>Kota Asal:</label>
+      <input type="text" id="kota" required />
+
+      <label>Alasan Gabung:</label>
+      <textarea id="alasan" rows="4" required></textarea>
+
+      <button type="submit">Kirim ke WhatsApp</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("wa-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nama = document.getElementById("nama").value;
+          const kota = document.getElementById("kota").value;
+          const alasan = document.getElementById("alasan").value;
+
+          const phoneNumber = "6283873363667"; // GANTI DENGAN NOMOR WA KAMU (tanpa +)
+          const message = `Halo Skate Arena! Saya mau daftar:\n\nNama: ${nama}\nKota: ${kota}\nAlasan: ${alasan}`;
+          const encodedMessage = encodeURIComponent(message);
+          const waLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+          window.open(waLink, "_blank");
+        });
+    </script>
+  </body>
+</html>
+<a href="https://wa.me/6283873363667" target="_blank" class="wa-float"
+  >Gabung WhatsApp</a
+>
